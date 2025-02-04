@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>carmatch</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="bg-black py-4 text-base sm:text-sm md:text-l lg:text-lg">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <nav class="flex justify-between items-center w-[95%]">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10">
+                        <img src="/resources/images/velocimeter.webp" alt="" class="">
+                    </div>
+                    <h3 class="text-slate-200">carmatch</h3>
+                </div>
+                <ul class="flex space-x-6">
+                    <li><a href="./login.html" class="text-slate-100 hover:text-orange-500">Entrar</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="relative">
+        <div class="absolute inset-0 h-[20vh] flex items-center bg-custom-gradient2 z-10"></div>
+
+        <div class="absolute w-full top-[10vh] z-20 px-8">
+            <div class="max-w-[400px] mx-auto p-6 py-8 bg-white shadow-md rounded-md">
+                <h5 class="my-2 text-xl font-semibold text-black text-center">Cadastrar</h5>
+                <form>
+                    <div class="mb-4 mt-3">
+                        <label for="email" class="text-black">E-mail</label>
+                        <input id="email" type="email"
+                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-green-600 focus:ring-0"
+                            placeholder="Seu E-mail">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="username" class="text-black">Senha</label>
+                        <input id="username" type="password"
+                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-green-600 focus:ring-0"
+                            placeholder="Senha">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="confirm-password" class="text-black">Confirmar Senha</label>
+                        <input id="confirm-ord" type="password"
+                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-green-600 focus:ring-0"
+                            placeholder="Confirmar Senha">
+                    </div>
+                </form>
+
+                <div class="flex items-center mb-4">
+                    <input id="default-checkbox" type="checkbox" value=""
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    <label for="default-checkbox" class="ml-3 text-sm font-medium text-gray-900">Li e concordo com os <a
+                            href="#" class="text-blue-600">Termos de Privacidade</a>.</label>
+                </div>
+
+                <div class="text-center">
+                    <button
+                        class="h-[50px] px-6 mt-3 bg-orange-500 text-white text-sm font-semibold rounded-full shadow-md hover:bg-orange-600">
+                        Confirmar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fixed bottom-0 left-0 w-full bg-black py-6">
+        <div
+            class="mx-auto max-w-full px-6 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
+            <div>
+                <h2 class="text-xl font-bold my-3">Links</h2>
+                <ul>
+                    <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Documentação</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

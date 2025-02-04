@@ -1,14 +1,245 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Simple Tailwind Starter</title>
-  </head>
-  <body>
-    <h1 class="text-4xl mb-4">Welcome</h1>
-    <p>Start building your Tailwind project</p>
-  </body>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" type="imagex/png" href="./resources/images/velocimeter.webp">
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <title>carmatch</title>
+</head>
+
+<body>
+  <section class="mx-auto h-[100vh] bg-custom-gradient text-gray-900">
+    <!-- Navbar -->
+    <header class="background-color: transparent py-4">
+      <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+        <!-- <div class="font-sans text-2xl font-semibold text-slate-200">carmatch</div> -->
+        <nav class="flex justify-between items-center w-[95%]">
+          <div class="flex items-center space-x-2">
+            <div class="w-10">
+              <img src="resources/images/velocimeter.webp" alt="" class="">
+            </div>
+            <h3 class="text-slate-200 text-xl">carmatch</h3>
+          </div>
+          <ul class="flex space-x-5">
+            <!-- <li><a href="#" class="text-slate-100 hover:text-gray-800">Home</a></li> -->
+            <li><a href="#sobre" class="text-slate-100 hover:text-black">Sobre</a></li>
+            <li><a href="./pages/register.html" class="text-slate-100 hover:text-black">Cadastre-se</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Navbar -->
+
+    <!-- Section busca  -->
+    <div class="flex justify-center items-center h-[calc(100vh-80px)]">
+      <div class="w-[616px] h-[236px] bg-white rounded-[55px] shadow-[0px_4px_4px_3px_rgba(0,0,0,0.15)] relative p-6">
+        <h2 class="absolute top-10 left-4 text-xl font-semibold text-gray-900 px-6">
+          Procurar carros
+        </h2>
+        <div class="flex justify-center items-center h-full">
+          <!-- Input -->
+          <div class="relative flex-grow max-w-[400px]">
+            <input id="searchInput" type="text" placeholder="Digite o modelo do carro"
+              class="w-full h-[50px] px-4 pl-12 rounded-full border border-gray-300 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500" />
+            <span class="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 text-lg">
+              <i data-lucide="search"></i>
+            </span>
+
+            <!-- Lista de Sugestões -->
+            <ul id="suggestions"
+              class="absolute w-full bg-white border border-gray-300 rounded-lg mt-1 shadow-md hidden z-50">
+
+            </ul>
+
+            <!-- Tags após seleção -->
+            <div id="selectedItems" class="absolute bottom-[-40px] left-4 flex justify-between gap-2 z-10">
+
+            </div>
+          </div>
+          <!-- Botão -->
+          <button id="ver"
+            class="ml-4 h-[50px] px-6 bg-orange-500 text-white text-sm font-semibold rounded-full shadow-md hover:bg-orange-600">
+            VER COMPARATIVO
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="">
+    <div class="container mx-auto px-2 my-20">
+      <h1 class="text-3xl font-bold text-center mb-4">Comparações Populares</h1>
+      <hr class="border-t-2 border-gray-300 mb-4">
+      <h2 class="text-xl font-semibold text-center mb-6"> Lorem ipsum dolor</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
+          <h3 class="text-xl font-semibold mb-2">Corolla 2016</h3>
+          <img src="resources/images/corolla.png" alt="Corolla 2016" class="w-full max-w-xs object-contain">
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
+          <h3 class="text-xl font-semibold mb-2">Jetta 2018</h3>
+          <img src="resources/images/jetta.png" alt="Jetta 2018" class="w-full max-w-xs object-contain">
+        </div>
+
+        <div class="bg-white p-5 rounded-lg shadow-lg flex flex-col items-center">
+          <h3 class="text-xl font-semibold mb-2">Fusion 2016</h3>
+          <img src="resources/images/fusion.png" alt="Fusion 2016" class="w-full max-w-xs object-contain">
+        </div>
+      </div>
+      <br>
+
+      <div class="flex justify-center items-center">
+        <button
+          class="h-[50px] px-6 bg-orange-500 text-white text-sm font-semibold rounded-full shadow-md hover:bg-orange-600">
+          VER DETALHES
+        </button>
+      </div>
+  </section>
+
+  <footer class="bottom-0 left-0 w-full bg-black py-6">
+    <div
+      class="mx-auto max-w-full px-6 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
+      <div>
+        <h2 class="text-xl font-bold my-3">Links</h2>
+        <ul>
+          <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
+          <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
+          <li><a href="#" class="hover:text-gray-400">Documentação</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Lucide.dev -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        lucide.createIcons();
+      } else {
+        console.error("Lucide não carregou corretamente.");
+      }
+    });
+  </script>
+
+  <!-- Script Carros -->
+  <script>
+    // Lista de sugestões
+    const suggestionsList = [
+      "Ford Mustang", "Chevrolet Camaro", "Honda Civic", "Toyota Corolla", "BMW M3",
+      "Audi A4", "Volkswagen Golf", "Porsche 911", "Jetta", "Fusion"
+    ];
+
+    const input = document.getElementById("searchInput");
+    const suggestionsBox = document.getElementById("suggestions");
+    const selectedItems = document.getElementById("selectedItems");
+    const maxBadges = 3; // limite
+
+
+    // Função para filtrar e exibir sugestões
+    input.addEventListener("input", function () {
+      const query = this.value.toLowerCase().trim();
+      suggestionsBox.innerHTML = ""; // Limpa sugestões anteriores
+
+      if (query === "") {
+        suggestionsBox.classList.add("hidden");
+        return;
+      }
+
+      const filteredSuggestions = suggestionsList.filter(item => item.toLowerCase().includes(query));
+
+      if (filteredSuggestions.length === 0) {
+        suggestionsBox.classList.add("hidden");
+        return;
+      }
+
+      filteredSuggestions.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        li.classList.add("px-4", "py-2", "cursor-pointer", "hover:bg-gray-200");
+
+        li.addEventListener("click", function () {
+          addBadge(item); // Adiciona o badge ao clicar
+          input.value = ""; // Limpa o input após a seleção
+          suggestionsBox.classList.add("hidden"); // Esconde a lista
+        });
+
+        suggestionsBox.appendChild(li);
+      });
+
+      suggestionsBox.classList.remove("hidden");
+    });
+
+    function addBadge(text) {
+      // Verifica se o limite foi atingido
+      if (selectedItems.children.length >= maxBadges) {
+        alert("Você só pode selecionar até " + maxBadges + " carros.");
+        return;
+      }
+
+      // Verifica se o item já foi adicionado
+      if ([...selectedItems.children].some(badge => badge.dataset.value === text)) {
+        return;
+      }
+
+      const badge = document.createElement("span");
+      badge.dataset.value = text;
+      badge.classList.add(
+        "bg-gray-300", "text-black", "text-xs", "font-medium",
+        "px-2.5", "py-0.5", "rounded-full", "shadow-md",
+        "flex", "justify-between", "items-center", "gap-1"
+      );
+
+      badge.innerHTML = `
+      ${text}
+      <div class="group relative flex items-center justify-center w-6 h-6 cursor-pointer">
+        <i data-lucide="x"
+          class="w-3 text-gray-600 transition-colors duration-300 group-hover:text-red-600"></i>
+        <span
+          class="absolute inset-0 rounded-full scale-0 bg-gray-200 opacity-50 transition-transform duration-300 group-hover:scale-100">
+        </span>
+      </div>
+    `;
+
+      // Adiciona evento para remover o badge ao clicar no "X"
+      badge.querySelector("div").addEventListener("click", function () {
+        badge.remove();
+      });
+
+      selectedItems.appendChild(badge);
+
+
+      // Atualiza os ícones Lucide
+      lucide.createIcons();
+    }
+
+    // Ocultar sugestões ao clicar fora
+    document.addEventListener("click", function (e) {
+      if (!input.contains(e.target) && !suggestionsBox.contains(e.target)) {
+        suggestionsBox.classList.add("hidden");
+      }
+    });
+
+
+    document.getElementById("ver").addEventListener("click", function () {
+      const selectedBadges = document.querySelectorAll("#selectedItems span");
+      const selectedCars = Array.from(selectedBadges).map(badge => badge.textContent.trim());
+
+      if (selectedCars.length > 0) {
+        // Criar uma URL passando os carros como parâmetros
+        const queryString = selectedCars.map(car => `cars[]=${encodeURIComponent(car)}`).join("&");
+        window.location.href = `pages/comparativo.html?${queryString}`;
+      } else {
+        alert("Selecione ao menos um carro para comparar!");
+      }
+    });
+
+  </script>
+</body>
+
 </html>
