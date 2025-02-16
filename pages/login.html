@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/input.css" />
+    <link rel="shortcut icon" type="imagex/png" href="/resources/images/velocimeter.webp">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>carmatch</title>
 </head>
 
@@ -30,23 +33,24 @@
     </header>
 
     <main class="relative">
-        <div class="absolute inset-0 h-[20vh] flex items-center bg-custom-gradient2 z-10"></div>
+        <div class="absolute inset-0 h-[20vh] flex items-center bg-custom-gradient2 z-10">
+        </div>
 
         <div class="absolute w-full top-[12.5vh] z-20 px-8">
             <div class="max-w-[400px] mx-auto p-6 py-12 bg-white shadow-md rounded-md">
                 <h5 class="my-2 text-xl font-semibold text-black text-center">Entrar</h5>
-                <form>
+                <form id="loginForm">
                     <div class="mb-4 mt-3">
                         <label for="email" class="text-black">E-mail</label>
                         <input id="email" type="email"
-                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-green-600 focus:ring-0"
+                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-orange-400 focus:ring-0"
                             placeholder="Seu E-mail">
                     </div>
 
                     <div class="mb-4">
                         <label for="username" class="text-black">Senha</label>
                         <input id="username" type="password"
-                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-green-600 focus:ring-0"
+                            class="w-full mt-3 py-2 px-3 h-10 bg-transparent rounded outline-none border border-gray-200 focus:border-orange-400 focus:ring-0"
                             placeholder="Senha">
                     </div>
 
@@ -61,23 +65,25 @@
                             Confirmar
                         </button>
                     </div>
+                </form>
             </div>
         </div>
     </main>
 
-    <footer class="fixed bottom-0 left-0 w-full bg-black py-6">
-        <div
-            class="mx-auto max-w-full px-6 sm:px-8 lg:px-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
+    <footer class="footer fixed bottom-0">
+        <div class="grid-container">
             <div>
-                <h2 class="text-xl font-bold my-3">Links</h2>
+                <h2>Links</h2>
                 <ul>
-                    <li><a href="/index.html" class="hover:text-gray-400">Home</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Sobre</a></li>
-                    <li><a href="#" class="hover:text-gray-400">Documentação</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="https://github.com/simaonarf/versus" target="_blank">Documentação</a></li>
                 </ul>
             </div>
         </div>
     </footer>
+
+    <script src="/scripts/loginStorage.js"></script>
 </body>
 
 </html>
